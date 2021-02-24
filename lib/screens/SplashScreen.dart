@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:mindscape_app/utils/sizes_helpers.dart';
+import 'package:mindscape_app/screens/OnBoardingScreen.dart';
+import 'package:mindscape_app/sizes_helpers.dart';
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -10,25 +11,53 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage('assets/images/splash_screen.png'),
-            fit: BoxFit.cover,
-          ),
-      ),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          Container(
-            margin: EdgeInsets.only(top: displayHeight(context) * 0.05),
-            child: Image.asset('assets/images/thesel_logo.png',
-                width: displayWidth(context) * 0.5,
-                height: displayHeight(context) * 0.5
+    return SafeArea(
+      child: Scaffold(
+        body: new Container(
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage('assets/images/splash_screen.png'),
+                fit: BoxFit.cover,
+              ),
+            ),
+            child: InkWell(
+              child: Column(
+                children: [
+                  Expanded(
+                      flex:3,
+                      child: Align(
+                        child: Image.asset("assets/images/thesel_logo.png",
+                            width: displayWidth(context)*0.5,
+                            height: displayHeight(context)*0.5),
+                      )
+                  ),
+                  Expanded(
+                      flex: 2,
+                      child: Padding(
+                          padding: EdgeInsets.symmetric(
+                              horizontal: displayWidth(context)*0.15),
+                        child: Column(
+                          children: [
+                            Spacer(),
+                            Text('Find Peace With Thesel',
+                            style: TextStyle(
+                              color: Color(0xFFC3C3C3),
+                              fontSize: 20
+                            ),),
+                            Spacer(flex:1),
+                          ],
+                        )
+                      ))
+                ],
+              ),
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context) => OnBoardingScreen())
+                );
+              },
             )
-          )
-        ]
-      ),
+        ),
+        //to make stack clickable
+      )
     );
   }
   
