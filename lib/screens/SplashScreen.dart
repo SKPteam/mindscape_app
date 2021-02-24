@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:mindscape_app/utils/sizes_helpers.dart';
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -18,11 +19,15 @@ class _SplashScreenState extends State<SplashScreen> {
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
-        children: <Widget>[
-          Image.asset('assets/images/thesel_logo.png', width:200,
-              height: 200
-          ),
-        ],
+        children: [
+          Container(
+            margin: EdgeInsets.only(top: displayHeight(context) * 0.05),
+            child: Image.asset('assets/images/thesel_logo.png',
+                width: displayWidth(context) * 0.5,
+                height: displayHeight(context) * 0.5
+            )
+          )
+        ]
       ),
     );
   }
