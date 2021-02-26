@@ -21,7 +21,7 @@ class OnBoardingContent extends StatelessWidget {
           width: displayWidth(context)*1,
         ),
         Container(
-          margin: EdgeInsets. only(top:displayWidth(context)*0.1),
+          margin: EdgeInsets.only(top:displayWidth(context)*0.1),
           child: Text(
             text,
             textAlign: TextAlign.center,

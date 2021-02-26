@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:mindscape_app/OnBoardingContent.dart';
-import 'package:mindscape_app/screens/UserConsultantOptScreen.dart';
+import 'package:mindscape_app/screens/onboarding/OnBoardingContent.dart';
+import 'package:mindscape_app/screens/user_or_consultant_screen.dart';
 import 'package:mindscape_app/sizes_helpers.dart';
 import 'package:mindscape_app/constants.dart';
 
@@ -52,7 +52,7 @@ class _OnBoardingState extends State<OnBoardingScreen> {
                       flex: 2,
                       child: Padding(
                         padding: EdgeInsets.symmetric(
-                            horizontal: displayWidth(context)*0.15),
+                            horizontal: displayWidth(context)*0.16),
                         child: Column(
                           children: <Widget>[
                             Spacer(),
