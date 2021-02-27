@@ -16,7 +16,7 @@ class PINNumber extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: displayWidth(context)/8.5,
+      width: 50.0,
       child: TextField(
         controller: textEditingController,
         enabled: false,
@@ -27,6 +27,11 @@ class PINNumber extends StatelessWidget{
           border: outlineInputBorder,
           filled: true,
           fillColor: Colors.white30
+        ),
+        style: TextStyle(
+          fontSize: 21.0,
+          fontWeight: FontWeight.bold,
+          color: Colors.white
         ),
       ),
     );

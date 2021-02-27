@@ -1,7 +1,8 @@
 import 'package:country_code_picker/country_code_picker.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:mindscape_app/screens/onboarding/securityPin/security_pin_screen.dart';
+import 'package:mindscape_app/screens/securityPin/security_pin_screen.dart';
+import 'package:mindscape_app/screens/sign_in_screen.dart';
 
 import '../constants.dart';
 import '../sizes_helpers.dart';
@@ -114,6 +115,7 @@ class _CompleteRegScreenState extends State<CompleteRegScreen>{
                                 buildDOBFormField(), // Date of birth field
                                 SizedBox(height: displayHeight(context)*0.020),
                                 Container(
+                                  height: displayHeight(context)*0.070,
                                   decoration: BoxDecoration(border: Border.all(color: Colors.white)),
                                   alignment: Alignment.centerLeft,
                                   child: Row(
@@ -123,7 +125,7 @@ class _CompleteRegScreenState extends State<CompleteRegScreen>{
                                         style: TextStyle(
                                           color: Colors.white,
                                           fontSize: displayWidth(context)/25,
-                                      ),)
+                                        ),)
                                     ],
                                   ),
                                 ),
@@ -132,7 +134,7 @@ class _CompleteRegScreenState extends State<CompleteRegScreen>{
                                   width: double.infinity,
                                   child: ElevatedButton(onPressed: (){ // Sign Up button
                                     Navigator.push(context,
-                                        MaterialPageRoute(builder: (context) => PinEntryScreen())
+                                        MaterialPageRoute(builder: (context) => SignInScreen())
                                     );},
                                       style: ElevatedButton.styleFrom(
                                           padding: EdgeInsets.symmetric(horizontal: 0, vertical: 20),
@@ -258,7 +260,7 @@ class _CompleteRegScreenState extends State<CompleteRegScreen>{
       // optional. aligns the flag and the Text left
       alignLeft: true,
       hideMainText: true,
-      padding: EdgeInsets.all(16),
+      padding: EdgeInsets.all(16)
     );
   }
 

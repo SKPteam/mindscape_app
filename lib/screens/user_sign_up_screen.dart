@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:mindscape_app/components/custom_surfix_icon.dart';
 import 'package:mindscape_app/constants.dart';
 import 'package:mindscape_app/screens/complete_profile_screen.dart';
+import 'package:mindscape_app/screens/sign_in_screen.dart';
 
 import '../sizes_helpers.dart';
 
@@ -15,7 +16,7 @@ class _ClientRegScreenState extends State<ClientRegScreen>{
   final _formKey = GlobalKey<FormState>();
   String email;
   String password;
-  String conform_password;
+  String confirm_password;
   bool remember = false;
   final List<String> errors = [];
 
@@ -37,6 +38,8 @@ class _ClientRegScreenState extends State<ClientRegScreen>{
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
+          resizeToAvoidBottomPadding: false,
+          extendBodyBehindAppBar: true,
           appBar: AppBar(
             backgroundColor: Colors.transparent,
             elevation: 0,
@@ -45,8 +48,6 @@ class _ClientRegScreenState extends State<ClientRegScreen>{
                 color: Color(0xffBEBEBE)
             ),),
           ),
-          resizeToAvoidBottomPadding: false,
-          extendBodyBehindAppBar: true,
           body: Container(
             decoration: BoxDecoration(
               image: DecorationImage(
@@ -185,7 +186,7 @@ class _ClientRegScreenState extends State<ClientRegScreen>{
         // If  you are using latest version of flutter then lable text and hint text shown like this
         // if you r using flutter less then 1.20.* then maybe this is not working properly
         floatingLabelBehavior: FloatingLabelBehavior.always,
-        suffixIcon: CustomSurffixIcon(svgIcon: "assets/icons/Lock.svg"),
+        //prefixIcon: CustomSurffixIcon(svgIcon: "assets/icons/Lock.svg"),
       ),
     );
   }
@@ -193,14 +194,14 @@ class _ClientRegScreenState extends State<ClientRegScreen>{
   TextFormField buildConformPassFormField() {
     return TextFormField(
       obscureText: true,
-      onSaved: (newValue) => conform_password = newValue,
+      onSaved: (newValue) => confirm_password = newValue,
       onChanged: (value) {
         if (value.isNotEmpty) {
           removeError(error: kPassNullError);
-        } else if (value.isNotEmpty && password == conform_password) {
+        } else if (value.isNotEmpty && password == confirm_password) {
           removeError(error: kMatchPassError);
         }
-        conform_password = value;
+        confirm_password = value;
       },
       validator: (value) {
         if (value.isEmpty) {

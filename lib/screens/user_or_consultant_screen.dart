@@ -37,12 +37,11 @@ class _UserConsultantOptState extends State<UserConsultantOptScreen>{
                       flex:2,
                       child: Padding(
                           padding: EdgeInsets.symmetric(
-                              horizontal: displayWidth(context)*0.16),
+                              horizontal: displayWidth(context)*0.12),
                           child: Column(
                             children: [
-                              Spacer(),
                               SizedBox(
-                                width: displayWidth(context)/1.5,
+                                width: double.infinity,
                                 child: ElevatedButton(onPressed: (){
                                   Navigator.push(context,
                                       MaterialPageRoute(builder: (context) => ClientRegScreen())
@@ -50,43 +49,51 @@ class _UserConsultantOptState extends State<UserConsultantOptScreen>{
                                     style: ElevatedButton.styleFrom(
                                       padding: EdgeInsets.symmetric(horizontal: 0, vertical: 20),
                                         primary: kPrimaryColor
-                                    ),child: Text('I am a user',style: TextStyle(
+                                    ),child: Text('I am a user',
+                                      style: TextStyle(
                                         color: Colors.white,
-                                        fontSize: displayWidth(context)*0.04
-                                    ),)),
-                                ),
+                                        fontSize: displayWidth(context)*0.045
+                                      )
+                                    )
+                                )
+                              ),
                               SizedBox(height: 16),
                               SizedBox(
-                                width: displayWidth(context)/1.5,
+                                width: double.infinity,
                                 child: ElevatedButton(onPressed: (){
-
+                                  //..
                                 },
                                     style: ElevatedButton.styleFrom(
                                       padding: EdgeInsets.symmetric(horizontal: 0, vertical: 20),
                                       primary: Colors.white
-                                    ),child: Text('I am a consultant',style: TextStyle(
+                                    ),
+                                    child: Text('I am a consultant',style: TextStyle(
                                         color: kPrimaryColor,
-                                        fontSize: displayWidth(context)*0.04
+                                        fontSize: displayWidth(context)*0.045
                                     ),)),
                               ),
                               Spacer(),
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  Text('Already have an account?', textAlign: TextAlign.center,
-                                    style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: displayWidth(context)*0.035
-                                    ),),
-                                  SizedBox(width: 4),
-                                  Text('Login', textAlign: TextAlign.center,
-                                    style: TextStyle(
-                                        color: kSecondaryColor,
-                                        fontSize: displayWidth(context)*0.035
-                                    ),)
+                                  SizedBox(
+                                    child: Row(
+                                      children: [
+                                        Text('Already have an account? ', textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                              color: Colors.white,
+                                              fontSize: displayWidth(context)/26
+                                          ),),
+                                        Text('Login', textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                              color: kSecondaryColor,
+                                              fontSize: displayWidth(context)/26
+                                          ),),
+                                      ],
+                                    ),
+                                  )
                                 ],
                               ),
-
                               Spacer(),
                             ],
                           )
