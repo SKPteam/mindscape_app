@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:mindscape_app/screens/securityPin/security_pin_screen.dart';
+import 'package:mindscape_app/screens/splash_screen.dart';
 
 import '../constants.dart';
 import '../sizes_helpers.dart';
@@ -217,4 +218,5 @@ class _SignInState extends State<SignInScreen>{
       ),
     );
   }
+
 }
