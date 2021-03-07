@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "368032626790",
+    "project_id": "mindscape-dc272",
+    "storage_bucket": "mindscape-dc272.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:368032626790:android:d9e1d31aca19f5a057d5a7",
+        "android_client_info": {
+          "package_name": "com.sli.mindscape"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "368032626790-11q3l3v7h3a36l6g709u1c54b6660kjc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCBjntWUZjts0Q787EOZpnh3WVNantAiL8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "368032626790-11q3l3v7h3a36l6g709u1c54b6660kjc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

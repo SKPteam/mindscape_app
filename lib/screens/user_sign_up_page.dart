@@ -1,18 +1,16 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:mindscape_app/components/custom_surfix_icon.dart';
 import 'package:mindscape_app/constants.dart';
 import 'package:mindscape_app/screens/complete_profile_screen.dart';
-import 'package:mindscape_app/screens/sign_in_screen.dart';
 
 import '../sizes_helpers.dart';
 
-class ClientRegScreen extends StatefulWidget{
+class ClientRegPage extends StatefulWidget{
   @override
-  _ClientRegScreenState createState() => _ClientRegScreenState();
+  _ClientRegState createState() => _ClientRegState();
 }
 
-class _ClientRegScreenState extends State<ClientRegScreen>{
+class _ClientRegState extends State<ClientRegPage>{
   final _formKey = GlobalKey<FormState>();
   String email;
   String password;
@@ -38,7 +36,7 @@ class _ClientRegScreenState extends State<ClientRegScreen>{
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
-          resizeToAvoidBottomPadding: false,
+          //resizeToAvoidBottomPadding: false,
           extendBodyBehindAppBar: true,
           appBar: AppBar(
             backgroundColor: Colors.transparent,

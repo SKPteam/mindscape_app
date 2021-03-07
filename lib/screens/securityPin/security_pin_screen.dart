@@ -22,7 +22,7 @@ class _PinEntryState extends State<PinEntryScreen>{
     signOut
   ];
 
-  List<String> currentPin = ["", "", "", ""];
+  //List<String> currentPin = ["", "", "", ""];
   TextEditingController pinOneController = TextEditingController();
   TextEditingController pinTwoController = TextEditingController();
   TextEditingController pinThreeController = TextEditingController();

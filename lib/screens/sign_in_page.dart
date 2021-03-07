@@ -1,18 +1,17 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:mindscape_app/screens/securityPin/security_pin_screen.dart';
-import 'package:mindscape_app/screens/splash_screen.dart';
+import 'package:mindscape_app/screens/dashboard/dashboard.dart';
 
 import '../constants.dart';
 import '../sizes_helpers.dart';
 
-class SignInScreen extends StatefulWidget{
+class SignInPage extends StatefulWidget{
   @override
   _SignInState createState() => _SignInState();
 }
 
-class _SignInState extends State<SignInScreen>{
+class _SignInState extends State<SignInPage>{
 
   final _formKey = GlobalKey<FormState>();
   String email;
@@ -39,7 +38,7 @@ class _SignInState extends State<SignInScreen>{
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
-          resizeToAvoidBottomPadding: false,
+          //resizeToAvoidBottomPadding: false,
           extendBodyBehindAppBar: true,
           appBar: AppBar(
             backgroundColor: Colors.transparent,
@@ -101,7 +100,7 @@ class _SignInState extends State<SignInScreen>{
                                   width: double.infinity,
                                   child: ElevatedButton(onPressed: (){
                                     Navigator.push(context,
-                                        MaterialPageRoute(builder: (context) => PinEntryScreen())
+                                        MaterialPageRoute(builder: (context) => Dashboard())
                                     );},
                                       style: ElevatedButton.styleFrom(
                                           padding: EdgeInsets.symmetric(horizontal: 0, vertical: 20),

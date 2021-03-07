@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:mindscape_app/constants.dart';
-import 'package:mindscape_app/screens/user_sign_up_screen.dart';
+import 'package:mindscape_app/screens/user_sign_up_page.dart';
 
 import '../sizes_helpers.dart';
 
@@ -44,7 +44,7 @@ class _UserConsultantOptState extends State<UserConsultantOptScreen>{
                                 width: double.infinity,
                                 child: ElevatedButton(onPressed: (){
                                   Navigator.push(context,
-                                      MaterialPageRoute(builder: (context) => ClientRegScreen())
+                                      MaterialPageRoute(builder: (context) => ClientRegPage())
                                   );},
                                     style: ElevatedButton.styleFrom(
                                       padding: EdgeInsets.symmetric(horizontal: 0, vertical: 20),

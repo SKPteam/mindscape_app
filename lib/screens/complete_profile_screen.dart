@@ -2,7 +2,7 @@ import 'package:country_code_picker/country_code_picker.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:mindscape_app/screens/securityPin/security_pin_screen.dart';
-import 'package:mindscape_app/screens/sign_in_screen.dart';
+import 'package:mindscape_app/screens/sign_in_page.dart';
 
 import '../constants.dart';
 import '../sizes_helpers.dart';
@@ -61,7 +61,7 @@ class _CompleteRegScreenState extends State<CompleteRegScreen>{
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
-          resizeToAvoidBottomPadding: false,
+          //resizeToAvoidBottomPadding: false,
           extendBodyBehindAppBar: true,
           appBar: AppBar(
             backgroundColor: Colors.transparent,
@@ -134,7 +134,7 @@ class _CompleteRegScreenState extends State<CompleteRegScreen>{
                                   width: double.infinity,
                                   child: ElevatedButton(onPressed: (){ // Sign Up button
                                     Navigator.push(context,
-                                        MaterialPageRoute(builder: (context) => SignInScreen())
+                                        MaterialPageRoute(builder: (context) => SignInPage())
                                     );},
                                       style: ElevatedButton.styleFrom(
                                           padding: EdgeInsets.symmetric(horizontal: 0, vertical: 20),

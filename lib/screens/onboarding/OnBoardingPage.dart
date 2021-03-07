@@ -6,12 +6,12 @@ import 'package:mindscape_app/sizes_helpers.dart';
 import 'package:mindscape_app/constants.dart';
 
 
-class OnBoardingScreen extends StatefulWidget{
+class OnBoardingPage extends StatefulWidget{
   @override
   _OnBoardingState createState() => _OnBoardingState();
 }
 
-class _OnBoardingState extends State<OnBoardingScreen> {
+class _OnBoardingState extends State<OnBoardingPage> {
   int currentPage = 0;
   List<Map<String, String>> onBoardingData = [
     {
