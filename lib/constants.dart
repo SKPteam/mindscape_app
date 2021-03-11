@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:mindscape_app/sizes_helpers.dart';
 
 const kPrimaryColor = Colors.green;
+const kPrimaryDarkColor = Color(0xff266C29);
+const kPrimaryAccentColor = Color(0xffc9d8cd);
 const kPrimaryLightColor = Color(0xfffffff);
 const kPrimaryGradientColor = LinearGradient(colors:
   [Color(0xFFFFA53E), Color(0xFFFF7643)],
