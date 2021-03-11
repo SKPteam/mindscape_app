@@ -2,18 +2,20 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:mindscape_app/screens/dashboard/dashboard.dart';
+import 'package:mindscape_app/screens/securityPin/securityPinPage.dart';
 
 import '../constants.dart';
 import '../sizes_helpers.dart';
 
 class SignInPage extends StatefulWidget{
+  static const String idScreen = 'signIn';
+
   @override
   _SignInState createState() => _SignInState();
 }
 
 class _SignInState extends State<SignInPage>{
-
-  final _formKey = GlobalKey<FormState>();
+  //final _formKey = GlobalKey<FormState>();
   String email;
   String password;
   String confirm_password;
@@ -99,9 +101,8 @@ class _SignInState extends State<SignInPage>{
                                 SizedBox(
                                   width: double.infinity,
                                   child: ElevatedButton(onPressed: (){
-                                    Navigator.push(context,
-                                        MaterialPageRoute(builder: (context) => Dashboard())
-                                    );},
+                                    Navigator.pushNamed(context, SecurityPinPage.idScreen);
+                                  },
                                       style: ElevatedButton.styleFrom(
                                           padding: EdgeInsets.symmetric(horizontal: 0, vertical: 20),
                                           primary: kPrimaryColor
@@ -130,7 +131,6 @@ class _SignInState extends State<SignInPage>{
                           ],
                         ),
                         SizedBox(height: displayHeight(context)*0.040),
-
                       ],
                     ),
                   ),

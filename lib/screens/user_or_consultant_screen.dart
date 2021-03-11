@@ -1,11 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:mindscape_app/constants.dart';
-import 'package:mindscape_app/screens/user_sign_up_page.dart';
+import 'package:mindscape_app/screens/userRegistration/userRegisterationPage.dart';
 
 import '../sizes_helpers.dart';
 
 class UserConsultantOptScreen extends StatefulWidget{
+  static const String idScreen = 'user/consultantOption';
+
   @override
   _UserConsultantOptState createState() => _UserConsultantOptState();
 }
@@ -43,13 +45,12 @@ class _UserConsultantOptState extends State<UserConsultantOptScreen>{
                               SizedBox(
                                 width: double.infinity,
                                 child: ElevatedButton(onPressed: (){
-                                  Navigator.push(context,
-                                      MaterialPageRoute(builder: (context) => ClientRegPage())
-                                  );},
+                                  Navigator.pushNamed(context, UserRegistrationPage.idScreen);
+                                },
                                     style: ElevatedButton.styleFrom(
                                       padding: EdgeInsets.symmetric(horizontal: 0, vertical: 20),
                                         primary: kPrimaryColor
-                                    ),child: Text('I am a user',
+                                    ),child: Text('User',
                                       style: TextStyle(
                                         color: Colors.white,
                                         fontSize: displayWidth(context)*0.045
@@ -67,7 +68,7 @@ class _UserConsultantOptState extends State<UserConsultantOptScreen>{
                                       padding: EdgeInsets.symmetric(horizontal: 0, vertical: 20),
                                       primary: Colors.white
                                     ),
-                                    child: Text('I am a consultant',style: TextStyle(
+                                    child: Text('Consultant',style: TextStyle(
                                         color: kPrimaryColor,
                                         fontSize: displayWidth(context)*0.045
                                     ),)),

@@ -2,18 +2,20 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:mindscape_app/constants.dart';
-import 'package:mindscape_app/screens/securityPin/pin_number.dart';
+import 'package:mindscape_app/screens/dashboard/dashboard.dart';
+import 'package:mindscape_app/screens/securityPin/components/pin_number.dart';
 
 import '../../sizes_helpers.dart';
-import 'keyboard_number.dart';
+import 'components/keyboard_number.dart';
 
-class PinEntryScreen extends StatefulWidget{
+class SecurityPinPage extends StatefulWidget{
+  static const String idScreen = 'securityPin';
+
   @override
-  _PinEntryState createState() => _PinEntryState();
+  _SecurityPinPageState createState() => _SecurityPinPageState();
 }
 
-class _PinEntryState extends State<PinEntryScreen>{
-
+class _SecurityPinPageState extends State<SecurityPinPage>{
   static const String createNewPin = 'Create new pin';
   static const String signOut = 'Sign out';
 
@@ -140,6 +142,7 @@ class _PinEntryState extends State<PinEntryScreen>{
                     KeyboardNumber(
                       n:1,
                       onPressed:(){
+                        Navigator.pushNamedAndRemoveUntil(context, Dashboard.idScreen, (route) => false);
                         //pinIndexSetup('1');
                       }
                     ),

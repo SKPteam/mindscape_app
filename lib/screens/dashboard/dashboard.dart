@@ -1,18 +1,19 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:mindscape_app/screens/dashboard/bottom_nav_bar.dart';
-import 'package:mindscape_app/screens/home/home_page.dart';
-import 'package:mindscape_app/screens/journal/journal_page.dart';
-import 'package:mindscape_app/screens/myProfile/my_profile_page.dart';
-import 'package:mindscape_app/screens/wallet/wallet_page.dart';
+import 'package:mindscape_app/screens/dashboard/components/bottomNavBar.dart';
+import 'package:mindscape_app/screens/home/homePage.dart';
+import 'package:mindscape_app/screens/journal/journalPage.dart';
+import 'package:mindscape_app/screens/myProfile/myProfilePage.dart';
+import 'package:mindscape_app/screens/wallet/walletPage.dart';
 
 class Dashboard extends StatefulWidget{
+  static const String idScreen = 'dashboard';
+
   @override
   _DashboardState createState() => _DashboardState();
 }
 
 class _DashboardState extends State<Dashboard>{
-
   static const String blog = 'Blog';
   static const String signOut = 'Sign out';
 

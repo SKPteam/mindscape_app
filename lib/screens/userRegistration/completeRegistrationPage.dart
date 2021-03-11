@@ -1,20 +1,21 @@
 import 'package:country_code_picker/country_code_picker.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:mindscape_app/screens/securityPin/security_pin_screen.dart';
-import 'package:mindscape_app/screens/sign_in_page.dart';
+import 'package:mindscape_app/screens/securityPin/securityPinPage.dart';
+import 'package:mindscape_app/screens/signInPage.dart';
 
-import '../constants.dart';
-import '../sizes_helpers.dart';
+import '../../constants.dart';
+import '../../sizes_helpers.dart';
 
-class CompleteRegScreen extends StatefulWidget{
+class CompleteRegistrationScreen extends StatefulWidget{
+  static const String idScreen = 'completeRegister';
+
   @override
-  _CompleteRegScreenState createState() => _CompleteRegScreenState();
+  _CompleteRegistrationState createState() => _CompleteRegistrationState();
 }
 
-class _CompleteRegScreenState extends State<CompleteRegScreen>{
-
-  final _formKey = GlobalKey<FormState>();
+class _CompleteRegistrationState extends State<CompleteRegistrationScreen>{
+ // final _formKey = GlobalKey<FormState>();
   final List<String> errors = [];
   String firstName;
   String lastName;
@@ -133,9 +134,8 @@ class _CompleteRegScreenState extends State<CompleteRegScreen>{
                                 SizedBox(
                                   width: double.infinity,
                                   child: ElevatedButton(onPressed: (){ // Sign Up button
-                                    Navigator.push(context,
-                                        MaterialPageRoute(builder: (context) => SignInPage())
-                                    );},
+                                    Navigator.pushNamedAndRemoveUntil(context, SignInPage.idScreen, (route) => false);
+                                  },
                                       style: ElevatedButton.styleFrom(
                                           padding: EdgeInsets.symmetric(horizontal: 0, vertical: 20),
                                           primary: kPrimaryColor

@@ -1,12 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:mindscape_app/screens/onboarding/OnBoardingContent.dart';
+import 'package:mindscape_app/screens/onboarding/components/onBoardingContent.dart';
 import 'package:mindscape_app/screens/user_or_consultant_screen.dart';
 import 'package:mindscape_app/sizes_helpers.dart';
 import 'package:mindscape_app/constants.dart';
 
 
 class OnBoardingPage extends StatefulWidget{
+  static const String idScreen = 'onBoarding';
+
   @override
   _OnBoardingState createState() => _OnBoardingState();
 }
@@ -65,9 +67,7 @@ class _OnBoardingState extends State<OnBoardingPage> {
                             ),
                             Spacer(flex: 2),
                             ElevatedButton(onPressed: () {
-                              Navigator.push(context,
-                                  MaterialPageRoute(builder: (context) => UserConsultantOptScreen())
-                              );
+                              Navigator.pushNamedAndRemoveUntil(context, UserConsultantOptScreen.idScreen, (route) => false);
                             },
                               child: Text('Next')
                             ),

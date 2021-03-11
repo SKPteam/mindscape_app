@@ -1,14 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:mindscape_app/screens/onboarding/OnBoardingPage.dart';
+import 'package:mindscape_app/screens/onboarding/onBoardingPage.dart';
 import 'package:mindscape_app/sizes_helpers.dart';
 
-class SplashScreen extends StatefulWidget {
-  @override
-  _SplashScreenState createState() => _SplashScreenState();
-}
-
-class _SplashScreenState extends State<SplashScreen> {
+class SplashScreen extends StatelessWidget {
+  static const String idScreen = 'splashScreen';
 
   @override
   Widget build(BuildContext context) {
@@ -56,8 +52,7 @@ class _SplashScreenState extends State<SplashScreen> {
                 ],
               ),
               onTap: (){
-                Navigator.push(context, MaterialPageRoute(builder: (context) => OnBoardingPage())
-                );
+                Navigator.pushNamedAndRemoveUntil(context, OnBoardingPage.idScreen, (route) => false);
               },
             )
         ),

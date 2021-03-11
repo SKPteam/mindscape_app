@@ -1,7 +1,17 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:mindscape_app/screens/splash_screen.dart';
+import 'package:mindscape_app/screens/dashboard/dashboard.dart';
+import 'package:mindscape_app/screens/onboarding/onBoardingPage.dart';
+import 'package:mindscape_app/screens/securityPin/securityPinPage.dart';
+import 'package:mindscape_app/screens/signInPage.dart';
+import 'package:mindscape_app/screens/splashScreen.dart';
+import 'package:mindscape_app/screens/userRegistration/completeRegistrationPage.dart';
+import 'package:mindscape_app/screens/userRegistration/userRegisterationPage.dart';
+import 'package:mindscape_app/screens/user_or_consultant_screen.dart';
 
-void main() {
+Future<void> main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(MyApp());
 }
 
@@ -27,7 +37,18 @@ class MyApp extends StatelessWidget {
         // closer together (more dense) than on mobile platforms.
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: SplashScreen(),
+      initialRoute: SplashScreen.idScreen,
+      routes: {
+        SplashScreen.idScreen: (context) => SplashScreen(),
+        OnBoardingPage.idScreen: (context) => OnBoardingPage(),
+        UserConsultantOptScreen.idScreen: (context) => UserConsultantOptScreen(),
+        UserRegistrationPage.idScreen: (context) => UserRegistrationPage(),
+        CompleteRegistrationScreen.idScreen: (context) => CompleteRegistrationScreen(),
+        SignInPage.idScreen: (context) => SignInPage(),
+        SecurityPinPage.idScreen: (context) => SecurityPinPage(),
+        Dashboard.idScreen: (context) => Dashboard(),
+      },
+      debugShowCheckedModeBanner: false,
     );
   }
 }
