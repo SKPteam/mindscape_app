@@ -65,7 +65,7 @@ class _HomeState extends State<HomePage>{
                     ],
                   ),
                   Container(
-                    margin: EdgeInsets.only(left: 20, right: 20),
+                    margin: EdgeInsets.only(left: displayWidth(context)* .056, right: displayWidth(context)* .056),
                     child: Stack(
                       children: [
                         Row(
@@ -103,7 +103,7 @@ class _HomeState extends State<HomePage>{
                             Container(
                               margin: EdgeInsets.only(left: displayWidth(context) * 0.2),
                               decoration: BoxDecoration(
-                                  color: Colors.white60,
+                                  color: Colors.white70,
                                   borderRadius: BorderRadius.circular(10.0)
                               ),
                               child: Padding(
@@ -124,7 +124,7 @@ class _HomeState extends State<HomePage>{
                             Container(
                               margin: EdgeInsets.only(left: displayWidth(context) * 0.02),
                               decoration: BoxDecoration(
-                                  color: Colors.white60,
+                                  color: Colors.white70,
                                   borderRadius: BorderRadius.circular(10.0)
                               ),
                               child: Padding(
