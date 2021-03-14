@@ -1,5 +1,3 @@
-import 'package:firebase_database/firebase_database.dart';
-
 class UserModel{
   static const ID = 'id';
   static const EMAIL = 'email';

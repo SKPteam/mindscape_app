@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:mindscape_app/models/scheduledMeeting.dart';
 import 'package:mindscape_app/screens/home/components/notificationBadge.dart';
 import 'package:mindscape_app/screens/home/components/selectCategoryTab.dart';
 import 'package:mindscape_app/sizes_helpers.dart';

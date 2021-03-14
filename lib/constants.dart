@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:mindscape_app/sizes_helpers.dart';
 
 const kPrimaryColor = Colors.green;
 const kPrimaryDarkColor = Color(0xff266C29);

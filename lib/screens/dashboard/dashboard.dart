@@ -57,7 +57,6 @@ class _DashboardState extends State<Dashboard>{
                       width: size.width,
                       height: 80,
                       child: Stack(
-                        overflow: Overflow.visible,
                         children: [
                           CustomPaint(
                             size: Size(size.width, 80),

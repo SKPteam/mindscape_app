@@ -1,11 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:mindscape_app/constants.dart';
 import 'package:mindscape_app/screens/dashboard/dashboard.dart';
 import 'package:mindscape_app/screens/securityPin/components/pin_number.dart';
 
-import '../../sizes_helpers.dart';
 import 'components/keyboard_number.dart';
 
 class SecurityPinPage extends StatefulWidget{

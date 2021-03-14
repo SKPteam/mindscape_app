@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:mindscape_app/screens/dashboard/dashboard.dart';
 import 'package:mindscape_app/screens/securityPin/securityPinPage.dart';
+import 'package:mindscape_app/screens/userRegistration/userRegisterationPage.dart';
 
 import '../constants.dart';
 import '../sizes_helpers.dart';
@@ -18,7 +18,7 @@ class _SignInState extends State<SignInPage>{
   //final _formKey = GlobalKey<FormState>();
   String email;
   String password;
-  String confirm_password;
+  String confirmPassword;
   bool remember = false;
   final List<String> errors = [];
 
@@ -115,20 +115,23 @@ class _SignInState extends State<SignInPage>{
                               ],
                             )),
                         SizedBox(height: displayHeight(context)*0.10),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text('Don'+"'t "+'have an account? ', textAlign: TextAlign.center,
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: displayWidth(context)/26
-                              ),),
-                            Text('Sign Up', textAlign: TextAlign.center,
-                              style: TextStyle(
-                                  color: kSecondaryColor,
-                                  fontSize: displayWidth(context)/26
-                              ),),
-                          ],
+                        GestureDetector(
+                          onTap: (){Navigator.pushNamed(context, UserRegistrationPage.idScreen);},
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text('Don'+"'t "+'have an account? ', textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: displayWidth(context)/26
+                                ),),
+                              Text('Sign Up', textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    color: kSecondaryColor,
+                                    fontSize: displayWidth(context)/26
+                                ),),
+                            ],
+                          ),
                         ),
                         SizedBox(height: displayHeight(context)*0.040),
                       ],

@@ -1,7 +1,6 @@
 import 'package:country_code_picker/country_code_picker.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:mindscape_app/screens/securityPin/securityPinPage.dart';
 import 'package:mindscape_app/screens/signInPage.dart';
 
 import '../../constants.dart';
@@ -50,11 +49,11 @@ class _CompleteRegistrationState extends State<CompleteRegistrationScreen>{
         currentDate = pickedDate;
       });
   }
-
-  void _onCountryChange(CountryCode countryCode) {
-    //manipulate the selected country code here
-    print("New Country selected: " + countryCode.toString());
-  }
+  //
+  // void _onCountryChange(CountryCode countryCode) {
+  //   //manipulate the selected country code here
+  //   print("New Country selected: " + countryCode.toString());
+  // }
 
 
 

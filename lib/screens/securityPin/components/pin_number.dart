@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:mindscape_app/sizes_helpers.dart';
 
 class PINNumber extends StatelessWidget{
 

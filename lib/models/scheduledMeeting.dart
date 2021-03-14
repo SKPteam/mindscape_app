@@ -1,5 +1,3 @@
-import 'package:flutter/cupertino.dart';
-
 class ScheduledMeeting{
   final String name;
   final String image;
